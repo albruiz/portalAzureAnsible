@@ -120,7 +120,6 @@
   $nombreMVs = $_POST['nombreMVs'];
   $numeroMVs = $_POST['numeroMVs'];
   $sistemaOperativo = $_POST['selectorSO'];
-  $memoria = pasarArray($_POST['arrayMemorias']);
   $data ="";
 
   

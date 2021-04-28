@@ -82,13 +82,14 @@
                                 </div>                    
                             </div>
                         </div>
-                        <div class="container">
-                            <div class="row mb-3">
-                                <div class="col-2 ">
-                                    <button class="btn btn-primary" name="botonEnviar" id="boton1" onclick="actualizaSelectores()">Enviar</button>
-                                </div>
+                    </form> 
+                    <div class="container">
+                        <div class="row mb-3">
+                            <div class="col-2 ">
+                                <button class="btn btn-primary" name="botonEnviar" id="boton1" onclick="recogeDatos()">Enviar</button>
                             </div>
                         </div>
+                    </div>
                         <script languaje="javascript">
                             // Cambia el HTML añadiendo los selectores de memoria (En la version final no estará disponible, pero en un futuro se podrá usar para elegir los tipos de maquina)
 
@@ -121,21 +122,17 @@
                                     - sistemaOperativo: indica el sistema operativo de las mv 
                                     - nombreMaquina: sera el nombre que tomaran las maquinas, es igual porque se diferencian añadiendoles un identificador unico (maquina0, maquina1, . . .)
                             */
-                            function recogeDatos(numeroMVs, sistemaOperativo, nombreMaquina){
-                                var arrayMemorias =  [];
-                                for(var i = 0; i < numeroMVs; i++){
-                                    arrayMemorias.push(document.getElementsByName("numeroMVs"+i)[0].value);
-                                }
+                            function recogeDatos(){
+                                var nombreMaquina = document.getElementById("nombreMVs").value;
+                                var sistemaOperativo = document.getElementById("selectorSO").value;
+                                var numeroMVs = document.getElementById("numeroMVs").value;
                                                                 
                                 var n1 = nombreMaquina;
                                 var n2 = numeroMVs;
                                 var n3 = sistemaOperativo;
-                                var n4 = arrayMemorias;
 
-                                var informacion = "nombreMVs="+n1+"&numeroMVs="+n2+"&selectorSO="+n3+"&arrayMemorias="+n4;
-                                for(var i = 0; i< n2; i++){
-                                    informacion = informacion+"&memoriaMV"+i+"="+n4[i];
-                                }
+                                var informacion = "nombreMVs="+n1+"&numeroMVs="+n2+"&selectorSO="+n3;
+                                
                                     // Llamada a Ajax con todos los elementos preparados
                                 $.ajax({
                                 url: "./escritura.php", 
@@ -147,7 +144,7 @@
                                 });
                             }
                         </script>
-                    </form> 
+                    
                 </div>
             </div>
 
