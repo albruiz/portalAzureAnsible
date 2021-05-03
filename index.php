@@ -17,19 +17,19 @@
   </head>
   <body>
     <!-- Título de la página -->
-    <div class="container-lg" style="background-color:#cbfaea">
+    <div class="container-lg" style="background-color:#F2F4FF">
         <div class="row justify-content-md-center">
             <div class="col-3">
-                <img src="imagenes/imagenTelefonica.png" class="rounded float-start"  width="250" height="150">
+                <img src="imagenes/nuevoLogo.png" class="rounded float-start"  width="275" height="auto">
             </div>
             <div class="col-9">
-                <p class="fs-1 text-center fw-bold">PORTAL AZURE - PRÁCTICAS CURRICULARES</p>
+                <p class="fs-1 text-center fw-bold">PORTAL WEB SERVICIOS IASS Y PASS</p>
             </div>
         </div>
     </div>
     
     <!-- Contenedor principal que almacena el menú de selección si IasS o PasS -->
-    <div class="container" style="background-color:cbfaea">
+    <div class="container" style="background-color:#F2F4FF">
         <!-- Menu de seleccion -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -42,7 +42,8 @@
 
         <!-- Primera opcion del menu que contiene las opciones de IasS -->
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="iassForm" role="tabpanel" aria-labelledby="IasS_tab">
+            
+            <div class="tab-pane fade show active mt-3" id="iassForm" role="tabpanel" aria-labelledby="IasS_tab">
                 <div class="container">
                     <!-- Comienza el formulario de datos IaaS -->
                     <form name="formularioDatos" id="formularioDatos"> 
@@ -86,7 +87,7 @@
                     <div class="container">
                         <div class="row mb-3">
                             <div class="col-2 ">
-                                <button class="btn btn-primary" name="botonEnviar" id="boton1" onclick="recogeDatos()">Enviar</button>
+                                <button class="btn btn-primary  mb-3" name="botonEnviar" id="boton1" onclick="recogeDatos()">Enviar</button>
                             </div>
                         </div>
                     </div>
@@ -122,7 +123,8 @@
             </div>
 
             <!-- Segunda opcion del menu que contiene las opciones de PasS -->
-            <div class="tab-pane fade" id="passForm" role="tabpanel" aria-labelledby="PasS-tab">
+            <div class="tab-pane fade  mt-3" id="passForm" role="tabpanel" aria-labelledby="PasS-tab">
+            <div class="container">
                 <div class="container">
                     <form name="formularioDatosPass" id="formularioDatosPass">
                         <div class="row mb-3">
@@ -146,7 +148,7 @@
                                 <label for="tipoServidorDB" class="form-label">Tipo de servidor</label>
                             </div>
                             <div class="col-auto ">
-                                <select class="form-select-lg mb-3" aria-label=".form-select-lg example" id="selectorDB">
+                                <select class="form-select" aria-label=".form-select-lg example" id="selectorDB">
                                     <option selected="true" disabled="disabled">Elija una opción...</option>
                                     <option value="PostgresSQL">PostgresSQL</option>
                                     <option value="MySQL">MySQL</option>
@@ -158,7 +160,7 @@
                     <div class="container">
                         <div class="row mb-3">
                             <div class="col-2 ">
-                                <button class="btn btn-primary" id="boton3" onclick="formularioPass()">Enviar</button> 
+                                <button class="btn btn-primary mb-3" id="boton3" onclick="formularioPass()">Enviar</button> 
                             </div>
                         </div>
                     </div>
@@ -185,6 +187,7 @@
                     }
 
                 </script>
+            </div>
             </div>
         </div>
     </div>      
