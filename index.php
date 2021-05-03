@@ -90,37 +90,10 @@
                             </div>
                         </div>
                     </div>
-                        <script languaje="javascript">
-                            // Cambia el HTML añadiendo los selectores de memoria (En la version final no estará disponible, pero en un futuro se podrá usar para elegir los tipos de maquina)
-
-                            /* 
-                                Funcion que actualiza los selectores para seleccionar el tamaño de memoria
-                            */
-                            function actualizaSelectores(){ 
-                                var nombreMaquina = document.getElementById("nombreMVs").value;
-                                var sistemaOperativo = document.getElementById("selectorSO").value;
-                                var numeroMVs = document.getElementById("numeroMVs").value;
-                                var arrayMemorias = [];
-                                if (numeroMVs > 0){
-                                    for(var i = 0; i < numeroMVs; i++){
-                                        
-                                        document.write("Memoria para la máquina: "+nombreMaquina+i+" en GB");
-                                        document.write("<input type=\"number\" name=\"numeroMVs"+i+"\" value=0> <br>")
-                                        console.log(document.getElementsByName("numeroMVs"+i)[0].value, "valor dentro del array");
-                                        arrayMemorias.push(document.getElementsByName("numeroMVs"+i)[0].value);
-                                    }
-                                }else{
-                                    console.log("Ha fallado " + numeroMVs + nombreMaquina); 
-                                }
-                                document.write('<button class="btn btn-primary" name="botonCrearConexion" id="boton2" onclick="recogeDatos('+numeroMVs+',\'' + sistemaOperativo + '\',\'' + nombreMaquina + '\' )">Enviar</button>');
-                            }
-                            
+                        <script languaje="javascript">                            
                             /*
-                                Funcion que recibe por parametro todos los valores de los formularios para crear la máquina y hace una llamada a Ajax para crear los archivos de despliegue de maquinas
-                                @param: 
-                                    - numeroMVs: indica el numero de mvs que se van a desplegar
-                                    - sistemaOperativo: indica el sistema operativo de las mv 
-                                    - nombreMaquina: sera el nombre que tomaran las maquinas, es igual porque se diferencian añadiendoles un identificador unico (maquina0, maquina1, . . .)
+                            *    Función que recoge los datos del formulario, mediante el evento onClick del botón del formulario. Una vez tiene estos datos está listo para hacer la llamada a 
+                            *    AJAX y hacer el envio de datos al servidor de Azure.
                             */
                             function recogeDatos(){
                                 var nombreMaquina = document.getElementById("nombreMVs").value;

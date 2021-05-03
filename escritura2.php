@@ -104,13 +104,6 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Prepare random postfix
-      set_fact:
-        rpfx: \"{{ 1000 | random }}\"
-        run_once: yes
-
-- hosts: localhost
-  tasks:
     
     - name: Create PostgreSQL Server
       azure_rm_postgresqlserver: # creacion del servidor Postgres sobre el que trabajamos
@@ -148,13 +141,6 @@
 # This playbook create a MySQL server and an instance of MySQL Database,
 
 ---
-- hosts: localhost
-  tasks:
-    - name: Prepare random postfix
-      set_fact:
-        rpfx: \"{{ 1000 | random }}\"
-        run_once: yes
-
 - hosts: localhost
   tasks:
 
