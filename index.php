@@ -23,27 +23,27 @@
                 <img src="imagenes/nuevoLogo.png" class="rounded float-start"  width="275" height="auto">
             </div>
             <div class="col-9">
-                <p class="fs-1 text-center fw-bold">PORTAL WEB SERVICIOS IASS Y PASS</p>
+                <p class="fs-1 text-center fw-bold">PORTAL WEB SERVICIOS IAAS Y PAAS</p>
             </div>
         </div>
     </div>
     
-    <!-- Contenedor principal que almacena el menú de selección si IasS o PasS -->
+    <!-- Contenedor principal que almacena el menú de selección si IaaS o PaaS -->
     <div class="container" style="background-color:#F2F4FF">
         <!-- Menu de seleccion -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="IasS_tab" data-bs-toggle="tab" data-bs-target="#iassForm" type="button" role="tab" aria-controls="iass" aria-selected="true">IasS</button>
+                <button class="nav-link active" id="IaaS_tab" data-bs-toggle="tab" data-bs-target="#iaasForm" type="button" role="tab" aria-controls="iaas" aria-selected="true">IaaS</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="PasS-tab" data-bs-toggle="tab" data-bs-target="#passForm" type="button" role="tab" aria-controls="pass" aria-selected="false">PaaS</button>
+                <button class="nav-link" id="PaaS-tab" data-bs-toggle="tab" data-bs-target="#paasForm" type="button" role="tab" aria-controls="paas" aria-selected="false">PaaS</button>
             </li>
         </ul>
 
-        <!-- Primera opcion del menu que contiene las opciones de IasS -->
+        <!-- Primera opcion del menu que contiene las opciones de IaaS -->
         <div class="tab-content" id="myTabContent">
             
-            <div class="tab-pane fade show active mt-3" id="iassForm" role="tabpanel" aria-labelledby="IasS_tab">
+            <div class="tab-pane fade show active mt-3" id="iaasForm" role="tabpanel" aria-labelledby="IaaS_tab">
                 <div class="container">
                     <!-- Comienza el formulario de datos IaaS -->
                     <form name="formularioDatos" id="formularioDatos"> 
@@ -122,11 +122,11 @@
                 </div>
             </div>
 
-            <!-- Segunda opcion del menu que contiene las opciones de PasS -->
-            <div class="tab-pane fade  mt-3" id="passForm" role="tabpanel" aria-labelledby="PasS-tab">
+            <!-- Segunda opcion del menu que contiene las opciones de PaaS -->
+            <div class="tab-pane fade  mt-3" id="paasForm" role="tabpanel" aria-labelledby="PaaS-tab">
             <div class="container">
                 <div class="container">
-                    <form name="formularioDatosPass" id="formularioDatosPass">
+                    <form name="formularioDatosPaas" id="formularioDatosPaas">
                         <div class="row mb-3">
                             <div class="col-3">
                                 <label for="nombreServidorDB" class="form-label">Nombre del servidor de Bases de Datos</label>
@@ -160,16 +160,16 @@
                     <div class="container">
                         <div class="row mb-3">
                             <div class="col-2 ">
-                                <button class="btn btn-primary mb-3" id="boton3" onclick="formularioPass()">Enviar</button> 
+                                <button class="btn btn-primary mb-3" id="boton3" onclick="formularioPaas()">Enviar</button> 
                             </div>
                         </div>
                     </div>
                 </div>
                 <script languaje="javascript">
                     /*
-                            Función que envia mediante Ajax los datos recogidos para la creacion del archivo generador de los servicios de PasS 
+                            Función que envia mediante Ajax los datos recogidos para la creacion del archivo generador de los servicios de PaaS 
                     */
-                    function formularioPass(){
+                    function formularioPaas(){
                         var nombreServidor = document.getElementById("nombreServidorDB").value;
                         var nombreBaseDatos = document.getElementById("nombreDB").value;
                         var tipoBaseDatos = document.getElementById("selectorDB").value; 
